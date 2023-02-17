@@ -1,18 +1,23 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.moin99.complexitymetrics</id>
-    <name>IntelliJ Platform Plugin complexity-metrics</name>
+    <name>Complexity Metrics for Java and Kotlin</name>
     <vendor>moin99</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends optional="true" config-file="java-metrics.xml">com.intellij.java</depends>
+    <depends optional="true" config-file="kotlin-metrics.xml">org.jetbrains.kotlin</depends>
+
+    <extensionPoints>
+        <extensionPoint name="metricProvider" interface="com.github.moin99.complexitymetrics.metrics.MetricProvider" dynamic="true"/>
+    </extensionPoints>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.moin99.complexitymetrics.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.moin99.complexitymetrics.services.MyProjectService"/>
+
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.moin99.complexitymetrics.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+<!--    <extensions defaultExtensionNs="com.github.moin99.complexitymetrics">-->
+<!--        <metricProvider implementation="com.sixrr.stockmetrics.DefaultMetricProvider"/>-->
+<!--    </extensions>-->
+
 </idea-plugin>
