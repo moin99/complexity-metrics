@@ -17,7 +17,7 @@
     </extensions>
 
 <!--    <extensions defaultExtensionNs="com.github.moin99.complexitymetrics">-->
-<!--        <metricProvider implementation="com.sixrr.stockmetrics.DefaultMetricProvider"/>-->
+<!--        <metricProvider implementation="com.github.moin99.stockmetrics.DefaultMetricProvider"/>-->
 <!--    </extensions>-->
 
 </idea-plugin>
