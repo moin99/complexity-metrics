@@ -5,7 +5,7 @@
     <vendor>moin99</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends optional="true" config-file="java-metrics.xml">com.intellij.java</depends>
+    <depends optional="true" config-file="java-metrics.xml">com.intellij.modules.java</depends>
     <depends optional="true" config-file="kotlin-metrics.xml">org.jetbrains.kotlin</depends>
 
     <extensionPoints>
@@ -17,7 +17,7 @@
     </extensions>
 
 <!--    <extensions defaultExtensionNs="com.github.moin99.complexitymetrics">-->
-<!--        <metricProvider implementation="com.sixrr.stockmetrics.DefaultMetricProvider"/>-->
+<!--        <metricProvider implementation="com.github.moin99.stockmetrics.DefaultMetricProvider"/>-->
 <!--    </extensions>-->
 
 </idea-plugin>

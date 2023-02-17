@@ -16,6 +16,6 @@
 
 <idea-plugin>
   <extensions defaultExtensionNs="com.github.moin99.complexitymetrics">
-<!--    <metricProvider implementation="com.sixrr.stockmetrics.KotlinMetricProvider"/>-->
+    <metricProvider implementation="com.github.moin99.stockmetrics.KotlinMetricProvider"/>
   </extensions>
 </idea-plugin>

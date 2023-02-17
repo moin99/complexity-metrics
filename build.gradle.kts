@@ -121,5 +121,6 @@ tasks {
 
     dependencies {
         implementation(project(":openapi"))
+        implementation(project(":stockmetrics"))
     }
 }
