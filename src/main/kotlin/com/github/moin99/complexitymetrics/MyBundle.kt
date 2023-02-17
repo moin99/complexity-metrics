@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.moin99.complexitymetrics
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
