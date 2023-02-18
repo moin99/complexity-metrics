@@ -122,5 +122,9 @@ tasks {
     dependencies {
         implementation(project(":openapi"))
         implementation(project(":stockmetrics"))
+        implementation(project(":utils"))
+        implementation(files("lib/args4j-2.32.jar"))
+        implementation(files("lib/jcommon-0.9.1.jar"))
+        implementation(files("lib/jfreechart-0.9.16.jar"))
     }
 }
