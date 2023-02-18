@@ -13,11 +13,26 @@
     </extensionPoints>
 
     <extensions defaultExtensionNs="com.intellij">
-
+        <appStarter implementation="com.github.moin99.complexitymetrics.offline.MetricsCommandLine"/>
+        <applicationService serviceImplementation="com.github.moin99.complexitymetrics.config.MetricsReloadedConfig"/>
+        <applicationService serviceImplementation="com.github.moin99.complexitymetrics.profile.MetricsProfileRepository"/>
+        <exportable serviceInterface="com.github.moin99.complexitymetrics.profile.MetricsProfileRepository"/>
     </extensions>
 
-<!--    <extensions defaultExtensionNs="com.github.moin99.complexitymetrics">-->
-<!--        <metricProvider implementation="com.github.moin99.stockmetrics.DefaultMetricProvider"/>-->
-<!--    </extensions>-->
+    <actions>
+        <group>
+            <action id="Metrics.ProjectMetricsAction" class="com.github.moin99.complexitymetrics.plugin.ProjectMetricsAction"
+                    text="Calculate Metrics..."/>
+            <!--action id="Metrics.ViewOfflineMetricsResults"
+                    class="com.sixrr.metrics.offline.ViewOfflineMetricsResultsAction"
+                    text="View Offline Metrics Results...">
+            </action-->
+            <add-to-group group-id="InspectCodeGroup" anchor="last"/>
+        </group>
+    </actions>
+
+    <extensions defaultExtensionNs="com.github.moin99.complexitymetrics">
+        <metricProvider implementation="com.github.moin99.stockmetrics.DefaultMetricProvider"/>
+    </extensions>
 
 </idea-plugin>
