@@ -30,6 +30,7 @@ import com.intellij.analysis.BaseAnalysisAction;
 import com.intellij.analysis.BaseAnalysisActionDialog;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.MessageType;
+import com.intellij.openapi.util.NlsContexts;
 import com.intellij.openapi.wm.ToolWindowManager;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -41,6 +42,11 @@ public class ProjectMetricsAction extends BaseAnalysisAction {
     public ProjectMetricsAction() {
         super(MetricsReloadedBundle.messagePointer("metrics.calculation"),
               MetricsReloadedBundle.messagePointer("metrics"));
+    }
+
+    @Override
+    protected @NotNull @NlsContexts.DialogTitle String getDialogTitle() {
+        return "My metrics";
     }
 
     @Override

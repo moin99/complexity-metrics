@@ -24,7 +24,7 @@ import java.util.function.Supplier;
 
 public final class MetricsReloadedBundle extends DynamicBundle {
 
-    public static final String BUNDLE = "com.github.moin99.complexitymetrics.utils.MetricsReloadedBundle";
+    public static final String BUNDLE = "complexitymetrics.utils.MetricsReloadedBundle";
     private static final MetricsReloadedBundle INSTANCE = new MetricsReloadedBundle();
 
     private MetricsReloadedBundle() {
